@@ -11,8 +11,8 @@ type UserContact struct {
 	ID          uint `gorm:"primarykey"`
 	UserID      uint `gorm:"column:user_id"`      // 用户的uuid
 	ContactID   uint `gorm:"column:contact_id"`   // 用户或群聊的uuid
-	ContactType int  `gorm:"column:contact_type"` // 0 用户 1 群聊
-	Status      int  `gorm:"column:status"`       // 0 正常 1 拉黑 2 被拉黑 3 删除好友 4 被删除好友 5 被禁言 6 退出群聊 7 被踢出群聊
+	ContactType int8 `gorm:"column:contact_type"` // 0 用户 1 群聊
+	Status      int8 `gorm:"column:status"`       // 0 正常 1 拉黑 2 被拉黑 3 删除好友 4 被删除好友 5 被禁言 6 退出群聊 7 被踢出群聊
 	CreatedAt   time.Time
 	DeletedAt   gorm.DeletedAt `gorm:"index"`
 }
