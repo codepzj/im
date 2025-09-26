@@ -9,7 +9,7 @@ import (
 // 用户信息
 type UserInfo struct {
 	ID        uint   `gorm:"primarykey"`
-	Uuid      string `gorm:"column:uuid;uniqueIndex"` // 唯一标识
+	Uuid      string `gorm:"column:uuid;type:varchar(36);uniqueIndex"` // 唯一标识
 	NickName  string `gorm:"column:nickname"`         // 昵称
 	Phone     string `gorm:"column:phone;index"`      // 手机
 	Age       int    `gorm:"column:age"`              // 年龄
