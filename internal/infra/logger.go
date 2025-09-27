@@ -34,7 +34,7 @@ func InitLogger(cfg *config.Config) {
 		ReplaceAttr: func(groups []string, a slog.Attr) slog.Attr {
 			if a.Key == slog.TimeKey {
 				t := a.Value.Time().In(cst)
-				a.Value = slog.StringValue(t.Format("2006-01-02 15:04:05")) // 标准化时间格式
+				a.Value = slog.StringValue(t.Format(time.DateTime)) // 标准化时间格式
 			}
 			return a
 		},
