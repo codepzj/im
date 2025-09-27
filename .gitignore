@@ -6,3 +6,13 @@ config/global.yaml
 
 # 临时文件
 tmp/
+
+# 前端
+web/node_modules
+web/dist
+web/dist-ssr
+web/*.local
+web/.vscode
+web/.idea
+web/.DS_Store
+web/*.sw?
