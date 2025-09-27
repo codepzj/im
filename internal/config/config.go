@@ -56,6 +56,7 @@ type Config struct {
 	Log       LogConfig       `mapstructure:"log"`
 	AliSms    AliSmsConfig    `mapstructure:"alisms"`
 	TecentSms TecentSmsConfig `mapstructure:"tecentsms"`
+	SmsExpireTime int           `mapstructure:"smsExpireTime"` // 短信验证码过期时间，单位分钟
 }
 
 func GetConfig() *Config {
